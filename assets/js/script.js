@@ -28,32 +28,43 @@ $(document).ready(function() {
             "5pm"
         ];
 
-    var timeBlock = $("<div>")
+    var timeBlock = $("<div class='time-block'>")
 
     
         for (var i = 0; i < workHours.length; i++) {      
           var timeBlockRow = $("<div>");
-        //   var timeBlockColHour = $("<td></td>")
-        //   var timeBlockColDescription = $("<td></td>")
-        //   var timeBlockColBtn = $("<td></td>")
-          var textArea = $("<textarea>")
-          var saveBtn = $("<button>")
-        //   timeBlockColHour.addClass("hour")
-        //   timeBlockColDescription.addClass("descrption")
-        //   timeBlockColBtn.addClass("saveBtn")
-          saveBtn.addClass("saveBtn")
-          timeBlockRow.addClass = ("time-block row hour ");
+
+          var timeBlockColHour = $("<div>")
+          var timeBlockColDescription = $("<div>")
+          var timeBlockColBtn = $("<button><i class='fa fa-save'></button>")
+
+          var textArea = $("<textarea class='col-12'>")
+        //   var saveBtn = $("<button><i class='fa fa-save'></button>")
+          
+          timeBlockColHour.addClass("hour col-2")
+          timeBlockColDescription.addClass("description col-8")
+          timeBlockColBtn.addClass("saveBtn col-2")
+        //   saveBtn.addClass("saveBtn")
+          timeBlockRow.addClass("row");
           timeBlockRow.attr("data-hours", workHours[i]);
-          timeBlockRow.text((workHours[i]));
-          timeBlockRow.append(textArea, saveBtn)
-        //   timeBlockRow.append(saveBtn)
+          
+          timeBlockColHour.text((workHours[i]));
+          timeBlockColDescription.append(textArea)
+        //   timeBlockColBtn.append(saveBtn)
+
           timeBlock.append(timeBlockRow)
+
+          timeBlockRow.append(timeBlockColHour)
+          timeBlockRow.append(timeBlockColDescription)
+          timeBlockRow.append(timeBlockColBtn)
+
 
         }
 
     $(".container").append(timeBlock);
+
+   
     
-    console.log(timeBlock)
 
 });
 
