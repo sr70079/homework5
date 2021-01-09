@@ -71,17 +71,4 @@ $(document).ready(function() {
         localStorage.setItem("events", JSON.stringify(workHours));
       }   
 });
-
  
-
- 
-
-
-
-  
-
-  
-
-    //     // when button is clicked event is saved to local storage
-
-    //     // event persist if page is refreshed 
