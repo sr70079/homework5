@@ -12,4 +12,4 @@ https://sr70079.github.io/homework5/
 
 ### Screenshots of Webpage: 
 
-![homepage](/assets/images/screenshot.JPG
+![calendar](/assets/images/screenshot.jpg)
